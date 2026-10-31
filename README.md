@@ -1,50 +1,92 @@
 # Personal Portfolio
 
-A responsive personal portfolio built with pure HTML, CSS and vanilla JavaScript for the Let's Tech Club Fullstack Development course. No frameworks, no build step, no backend.
+A responsive personal portfolio website built with HTML, CSS, and vanilla JavaScript for the Let's Tech Club Fullstack Development course. The website uses no frontend frameworks, build tools, or backend services.
 
 ## Overview
 
-The page introduces me, lists my skills (including what I am still learning), shows practice projects with category filters, and has a contact section. It works on phone, tablet and desktop.
+This portfolio introduces me as a Software Engineering student at Mae Fah Luang University who is interested in full-stack development and UI/UX design.
 
-## How to run
+It includes:
 
-Option 1: open `index.html` directly in a browser.
+- A personal introduction and About section
+- Technical skills and currently learning topics
+- Project cards with category filters
+- Light and dark themes
+- A responsive mobile navigation menu
+- A contact section with client-side form validation
+- Links to my GitHub and LinkedIn profiles
 
-Option 2 (recommended, needed to test theme persistence on one address):
+The website is designed to work on desktop, tablet, and mobile screens.
+
+## Technologies Used
+
+- **HTML5** — Page structure and semantic elements
+- **CSS3** — Styling, responsive layouts, and light/dark themes
+- **JavaScript** — Project rendering, category filters, mobile navigation, theme persistence, and form validation
+- **localStorage** — Saving the selected theme preference
+- **GitHub Pages** — Static website hosting
+
+## Live Website
+
+Visit the deployed portfolio:
+
+[https://hsarpwintoo.github.io/f_port/](https://hsarpwintoo.github.io/f_port/)
+
+## How to Run Locally
+
+You can open `index.html` directly in a browser. However, using a local server is recommended for testing the website.
+
+### Option 1: Python HTTP Server
+
+From the project folder, run:
 
 ```bash
-# from the project folder
+python -m http.server 8000
+```
+
+If your system uses `python3` instead, run:
+
+```bash
 python3 -m http.server 8000
-# then open http://localhost:8000
 ```
 
-Or use the VS Code "Live Server" extension.
+Then open the following address in your browser:
 
-## Project structure
+[http://localhost:8000](http://localhost:8000)
 
+### Option 2: VS Code Live Server
+
+Open the project folder in Visual Studio Code, start the Live Server extension, and open the local website in your browser.
+
+## Project Structure
+
+```text
+f_port/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── studyzen-preview.png
+│   ├── enertrack-preview.png
+│   └── mypo-preview.png
+├── screenshots/
+│   ├── portfolio-desktop.png
+│   └── portfolio-mobile.png
+└── README.md
 ```
-index.html        Page content and semantic structure
-css/style.css     All styles, responsive rules, light and dark themes
-js/main.js        Project data, card rendering, filters, menu, theme, form
-assets/           Local project preview images
-README.md         This file
-screenshots/      Desktop and mobile screenshots
-```
 
-## Required features completed
+The project structure above includes the files and folders currently used in the repository.
 
-- [x] Responsive one-page layout with header, hero, about, skills, projects, contact, footer
-- [x] Mobile navigation (button with aria-expanded, closes on link click and Escape, hidden links not tabbable)
-- [x] Contact form validation (name, email, message 20 to 500 trimmed characters, inline errors, focus on first invalid field, live character count, demo-only status message)
-- [x] Project cards rendered from a JavaScript array, with All plus category filters and visible result count
-- [x] Light and dark theme saved in localStorage, with a fallback when storage is unavailable
+## Known Limitations
 
-## Known limitations
-
-- The contact form is a front-end demo only; it does not send or save messages. Use the email link instead.
-- Project links in the JavaScript data point to the current project demos and repositories; profile/contact links should be reviewed before publishing.
+- **Contact form:** The form validates user input but does not send or store messages. Visitors can use the email link provided in the Contact section.
+- **Static website:** The portfolio does not use a backend or database.
+- **Project functionality:** Each project link leads to its corresponding demo, design, API endpoint, or source repository, depending on the project.
+- **Browser storage:** The theme preference is stored locally in the visitor's browser.
 
 ## Credits
 
-- All code written by me. No outside images or templates used.
-- References: MDN Web Docs (HTML, CSS, DOM, localStorage, ARIA).
+- Built as part of the Let's Tech Club Fullstack Development course.
+- Technical references: [MDN Web Docs](https://developer.mozilla.org/) for HTML, CSS, JavaScript, DOM manipulation, accessibility, and `localStorage`.
